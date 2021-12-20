@@ -1,0 +1,546 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>html5-qrcode</title><meta name="description" content="Documentation for html5-qrcode"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">html5-qrcode</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>html5-qrcode</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#html5-qrcode" id="html5-qrcode" style="color: inherit; text-decoration: none;">
+  <h1>Html5-QRCode</h1>
+</a>
+
+<a href="#supports-barcodes-now-" id="supports-barcodes-now-" style="color: inherit; text-decoration: none;">
+  <h2>(supports barcodes now :))</h2>
+</a>
+<p>A cross-platform HTML5 QR code &amp; barcode reader.</p>
+<p>Use this lightweight library to easily / quickly integrate QR code, bar code, and other common code scanning capabilities to your web application. </p>
+<ul>
+<li><p>Supports easy scanning using an integrated webcam or camera in smartphones (Android / IOS).</p>
+</li>
+<li><p>Supports scanning codes from files or default cameras on smartphones.</p>
+</li>
+<li><p><strong><u>Recently Added</u></strong> Supports bar code scanning in various formats.</p>
+</li>
+<li><p>Supports two kinds of APIs</p>
+<ul>
+<li><code>Html5QrcodeScanner</code> — End-to-end scanner with UI, integrate with less than ten lines of code.</li>
+<li><code>Html5Qrcode</code> — Powerful set of APIs you can use to build your UI without worrying about camera setup, handling permissions, reading codes, etc.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Support for scanning local files on the device is a new addition and helpful for the web browser which does not support inline web-camera access in smartphones. <strong>Note:</strong> This doesn&#39;t upload files to any server — everything is done locally.</p>
+</blockquote>
+<p><a href="https://travis-ci.org/mebjas/html5-qrcode"><img src="https://travis-ci.org/mebjas/html5-qrcode.svg?branch=master" alt="Build Status"></a> <a href="https://github.com/mebjas/html5-qrcode/issues"><img src="https://img.shields.io/github/issues/mebjas/html5-qrcode" alt="GitHub issues"></a> <a href="https://github.com/mebjas/html5-qrcode/releases"><img src="https://img.shields.io/github/v/tag/mebjas/html5-qrcode" alt="GitHub tag (latest by date)"></a> <img src="https://img.shields.io/github/license/mebjas/html5-qrcode" alt="GitHub"> <a href="https://www.codacy.com/gh/mebjas/html5-qrcode/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mebjas/html5-qrcode&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/51e4f0ef8b0b42e1b93ce29875dd23a0" alt="Codacy Badge"></a> <a href="https://gitter.im/html5-qrcode/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/html5-qrcode/community.svg" alt="Gitter"></a></p>
+<p><img src="https://img.shields.io/github/downloads/mebjas/html5-qrcode/total?label=Github%20downloads&style=for-the-badge" alt="GitHub all releases"> <a href="https://www.npmjs.com/package/html5-qrcode"><img src="https://img.shields.io/npm/dw/html5-qrcode?label=npm%20downloads&style=for-the-badge" alt="npm"></a></p>
+<table>
+<thead>
+<tr>
+<th><img src="./assets/pixel3.gif" width="180px"></th>
+<th><img src="./assets/pixel4_barcode_480.gif" width="180px"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>Demo at <a href="https://scanapp.org">scanapp.org</a></em></td>
+<td><em>Demo at <a href="https://qrcode.minhazav.dev">qrcode.minhazav.dev</a> - <strong>Scanning different types of codes</strong></em></td>
+</tr>
+</tbody></table>
+
+<a href="#notice" id="notice" style="color: inherit; text-decoration: none;">
+  <h2>Notice</h2>
+</a>
+<p><strong>UX/UXD/UXR help wanted</strong>: We are looking to improve user experience of this code scanning library — if you are interested in making this experience better for both developers and end users, please share your ideas, thoughts, inputs in <a href="https://github.com/mebjas/html5-qrcode/discussions/213">this discussion</a></p>
+
+<a href="#supported-platforms" id="supported-platforms" style="color: inherit; text-decoration: none;">
+  <h2>Supported platforms</h2>
+</a>
+<p>We are working continuously on adding support for more and more platforms. If you find a platform or a browser where the library is not working, please feel free to file an issue. Check the <a href="https://blog.minhazav.dev/research/html5-qrcode.html">demo link</a> to test it out.</p>
+<p><strong>Legends</strong></p>
+<ul>
+<li><img src="assets/done.png" alt=""> Means full support — inline webcam and file based </li>
+<li><img src="assets/partial.png" alt=""> Means partial support — only file based, webcam in progress</li>
+</ul>
+
+<a href="#pc--mac" id="pc--mac" style="color: inherit; text-decoration: none;">
+  <h3>PC / Mac</h3>
+</a>
+<table>
+<thead>
+<tr>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br/>Firefox</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br/>Chrome</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /><br/>Safari</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /><br/>Opera</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br/> Edge</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="./assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+</tr>
+</tbody></table>
+
+<a href="#android" id="android" style="color: inherit; text-decoration: none;">
+  <h3>Android</h3>
+</a>
+<table>
+<thead>
+<tr>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br/>Chrome</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br/>Firefox</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br/> Edge</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /><br/>Opera</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera-mini/opera-mini_48x48.png" alt="Opera-Mini" width="24px" height="24px" /><br/> Opera Mini</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/uc/uc_24x24.png" alt="UC" width="24px" height="24px" /> <br/> UC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="./assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/done.png" alt=""></td>
+<td><img src="assets/partial.png" alt=""></td>
+<td><img src="assets/partial.png" alt=""></td>
+</tr>
+</tbody></table>
+
+<a href="#ios" id="ios" style="color: inherit; text-decoration: none;">
+  <h3>IOS</h3>
+</a>
+<table>
+<thead>
+<tr>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_24x24.png" alt="Safari" width="24px" height="24px" /><br/>Safari</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br/>Chrome</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br/>Firefox</th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br/> Edge</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="./assets/done.png" alt=""></td>
+<td><img src="assets/partial.png" alt=""></td>
+<td><img src="assets/partial.png" alt=""></td>
+<td><img src="assets/partial.png" alt=""></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Apparently, Webkit for IOS is used by Chrome, Firefox, and other browsers in IOS and they do not have webcam permissions yet. There is an ongoing issue on fixing the support for iOS - <a href="https://github.com/mebjas/html5-qrcode/issues/14">issue/14</a></p>
+</blockquote>
+
+<a href="#framework-support" id="framework-support" style="color: inherit; text-decoration: none;">
+  <h3>Framework support</h3>
+</a>
+<p>The library can be easily used with several other frameworks, I have been adding examples for a few of them and would continue to add more.</p>
+<table>
+<thead>
+<tr>
+<th><img src="./assets/html5.png" width="30px"></th>
+<th><img src="./assets/vuejs.png" width="30px"></th>
+<th><img src="./assets/electron.png" width="30px"></th>
+<th><img src="./assets/react.svg" width="30px"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./examples/html5">Html5</a></td>
+<td><a href="./examples/vuejs">VueJs</a></td>
+<td><a href="./examples/electron">ElectronJs</a></td>
+<td><a href="https://github.com/scanapp-org/html5-qrcode-react">React</a></td>
+</tr>
+</tbody></table>
+
+<a href="#supported-code-formats" id="supported-code-formats" style="color: inherit; text-decoration: none;">
+  <h3>Supported Code formats</h3>
+</a>
+<p>Code scanning is dependent on <a href="https://github.com/zxing-js/library">Zxing-js</a> library. We will be working on top of it to add support for more types of code scanning. If you feel a certain type of code would be helpful to have, please file a feature request.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QR Code</td>
+<td><img src="./assets/qr-code.png" width="200px"></td>
+</tr>
+<tr>
+<td>AZTEC</td>
+<td><img src="./assets/aztec.png" ></td>
+</tr>
+<tr>
+<td>CODE_39</td>
+<td><img src="./assets/code_39.gif" ></td>
+</tr>
+<tr>
+<td>CODE_93</td>
+<td><img src="./assets/code_93.gif" ></td>
+</tr>
+<tr>
+<td>CODE_128</td>
+<td><img src="./assets/code_128.gif" ></td>
+</tr>
+<tr>
+<td>ITF</td>
+<td><img src="./assets/itf.png" ></td>
+</tr>
+<tr>
+<td>EAN_13</td>
+<td><img src="./assets/ean13.jpeg" ></td>
+</tr>
+<tr>
+<td>EAN_8</td>
+<td><img src="./assets/ean8.jpeg" ></td>
+</tr>
+<tr>
+<td>PDF_417</td>
+<td><img src="./assets/pdf417.png" ></td>
+</tr>
+<tr>
+<td>UPC_A</td>
+<td><img src="./assets/upca.jpeg" ></td>
+</tr>
+<tr>
+<td>UPC_E</td>
+<td><img src="./assets/upce.jpeg" ></td>
+</tr>
+<tr>
+<td>DATA_MATRIX</td>
+<td><img src="./assets/datamatrix.png" ></td>
+</tr>
+<tr>
+<td>MAXICODE*</td>
+<td><img src="./assets/maxicode.gif" ></td>
+</tr>
+<tr>
+<td>RSS_14*</td>
+<td><img src="./assets/rss14.gif" ></td>
+</tr>
+<tr>
+<td>RSS_EXPANDED*</td>
+<td><img src="./assets/rssexpanded.gif" ></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>*Formats are not supported by our experimental integration with native
+BarcodeDetector API integration (<a href="/experimental.md">Read more</a>).</p>
+</blockquote>
+
+<a href="#description---view-demo" id="description---view-demo" style="color: inherit; text-decoration: none;">
+  <h2>Description - <a href="https://blog.minhazav.dev/research/html5-qrcode.html">View Demo</a></h2>
+</a>
+<blockquote>
+<p>See an end to end scanner experience at <a href="https://scanapp.org">scanapp.org</a>.</p>
+</blockquote>
+<p>This is a cross-platform JavaScript library to integrate QR code, bar codes &amp; a few other types of code scanning capabilities to your applications running on HTML5 compatible browser.</p>
+<p>Supports:</p>
+<ul>
+<li>Querying camera on the device (with user permissions)</li>
+<li>Rendering live camera feed, with easy to use user interface for scanning</li>
+<li>Supports scanning a different kind of QR codes, bar codes and other formats</li>
+<li>Supports selecting image files from the device for scanning codes</li>
+</ul>
+
+<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
+  <h2>How to use</h2>
+</a>
+<blockquote>
+<p>For full information <a href="https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/">read this article</a>.</p>
+</blockquote>
+<p>Download the script from <a href="https://github.com/mebjas/html5-qrcode/releases">release page</a> or install using <code>npm</code> with:</p>
+<pre><code class="language-sh"><span class="hl-0">npm i html5-qrcode</span>
+</code></pre>
+<p>Add an element you want to use as a placeholder for QR Code scanner</p>
+<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">div</span><span class="hl-0"> </span><span class="hl-3">id</span><span class="hl-0">=</span><span class="hl-4">&quot;reader&quot;</span><span class="hl-0"> </span><span class="hl-3">width</span><span class="hl-0">=</span><span class="hl-4">&quot;600px&quot;</span><span class="hl-1">&gt;&lt;/</span><span class="hl-2">div</span><span class="hl-1">&gt;</span>
+</code></pre>
+<blockquote>
+<p>Ideally do not set the height of this container as the height should depend on the height of the video feed from the camera. The library would honor the existing width, otherwise apply the default width. The height is derived from the aspect ratio of the video feed.</p>
+</blockquote>
+
+<a href="#using-directly-in-browser-without-any-loader" id="using-directly-in-browser-without-any-loader" style="color: inherit; text-decoration: none;">
+  <h3>Using directly in browser without any loader</h3>
+</a>
+<p>If you are not using any loader, you can get the latest UMD javascript code in production from <a href="https://unpkg.com/html5-qrcode">https://unpkg.com/html5-qrcode</a>.</p>
+<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">script</span><span class="hl-5"> </span><span class="hl-3">src</span><span class="hl-5">=</span><span class="hl-4">&quot;https://unpkg.com/html5-qrcode&quot;</span><span class="hl-5"> </span><span class="hl-3">type</span><span class="hl-5">=</span><span class="hl-4">&quot;text/javascript&quot;</span><span class="hl-1">&gt;</span>
+</code></pre>
+<blockquote>
+<p>In case you installed the plugin using <code>npm</code> but still use javascript without any module loader, you can get the minified script in <code>node_modules/html5-qrcode/html5-qrcode.min.js</code></p>
+</blockquote>
+
+<a href="#using-with-module-loaders" id="using-with-module-loaders" style="color: inherit; text-decoration: none;">
+  <h3>Using with module loaders</h3>
+</a>
+<p>Include the script with</p>
+<pre><code class="language-js"><span class="hl-6">// To use Html5QrcodeScanner (more info below)</span><br/><span class="hl-7">import</span><span class="hl-0"> {</span><span class="hl-8">Html5QrcodeScanner</span><span class="hl-0">} </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-9">&quot;html5-qrcode&quot;</span><br/><br/><span class="hl-6">// To use Html5Qrcode (more info below)</span><br/><span class="hl-7">import</span><span class="hl-0"> {</span><span class="hl-8">Html5Qrcode</span><span class="hl-0">} </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-9">&quot;html5-qrcode&quot;</span>
+</code></pre>
+
+<a href="#easy-mode---with-end-to-end-scanner-user-interface" id="easy-mode---with-end-to-end-scanner-user-interface" style="color: inherit; text-decoration: none;">
+  <h3>Easy Mode - With end to end scanner user interface</h3>
+</a>
+<p><code>Html5QrcodeScanner</code> lets you implement an end to end scanner with few lines of code with the default user interface which allows scanning using the camera or selecting an image from the file system.</p>
+<p>You can set up the scanner as follows:</p>
+<pre><code class="language-js"><span class="hl-10">function</span><span class="hl-0"> </span><span class="hl-11">onScanSuccess</span><span class="hl-0">(</span><span class="hl-8">decodedText</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-6">// handle the scanned code as you like, for example:</span><br/><span class="hl-0">  </span><span class="hl-8">console</span><span class="hl-0">.</span><span class="hl-11">log</span><span class="hl-0">(</span><span class="hl-9">`Code matched = </span><span class="hl-10">${</span><span class="hl-8">decodedText</span><span class="hl-10">}</span><span class="hl-9">`</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">);</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">function</span><span class="hl-0"> </span><span class="hl-11">onScanFailure</span><span class="hl-0">(</span><span class="hl-8">error</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-6">// handle scan failure, usually better to ignore and keep scanning.</span><br/><span class="hl-0">  </span><span class="hl-6">// for example:</span><br/><span class="hl-0">  </span><span class="hl-8">console</span><span class="hl-0">.</span><span class="hl-11">warn</span><span class="hl-0">(</span><span class="hl-9">`Code scan error = </span><span class="hl-10">${</span><span class="hl-8">error</span><span class="hl-10">}</span><span class="hl-9">`</span><span class="hl-0">);</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">let</span><span class="hl-0"> </span><span class="hl-8">html5QrcodeScanner</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5QrcodeScanner</span><span class="hl-0">(</span><br/><span class="hl-0">  </span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  { </span><span class="hl-8">fps:</span><span class="hl-0"> </span><span class="hl-12">10</span><span class="hl-0">, </span><span class="hl-8">qrbox:</span><span class="hl-0"> {</span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">} },</span><br/><span class="hl-0">  </span><span class="hl-6">/* verbose= */</span><span class="hl-0"> </span><span class="hl-10">false</span><span class="hl-0">);</span><br/><span class="hl-8">html5QrcodeScanner</span><span class="hl-0">.</span><span class="hl-11">render</span><span class="hl-0">(</span><span class="hl-8">onScanSuccess</span><span class="hl-0">, </span><span class="hl-8">onScanFailure</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#pro-mode---if-you-want-to-implement-your-own-user-interface" id="pro-mode---if-you-want-to-implement-your-own-user-interface" style="color: inherit; text-decoration: none;">
+  <h3>Pro Mode - if you want to implement your own user interface</h3>
+</a>
+<p>You can use <code>Html5Qrcode</code> class to set up your QR code scanner (with your own user interface) and allow users to scan QR codes using the camera or by choosing an image file in the file system or native cameras in smartphones.</p>
+<p>You can use the following APIs to <code>fetch camera</code>, <code>start</code> scanning and <code>stop</code> scanning.</p>
+
+<a href="#for-using-inline-qr-code-scanning-with-webcam-or-smartphone-camera" id="for-using-inline-qr-code-scanning-with-webcam-or-smartphone-camera" style="color: inherit; text-decoration: none;">
+  <h4>For using inline QR Code scanning with Webcam or Smartphone camera</h4>
+</a>
+
+<a href="#start-scanning" id="start-scanning" style="color: inherit; text-decoration: none;">
+  <h5>Start Scanning</h5>
+</a>
+<p>To get a list of supported cameras, query it using static method <code>Html5Qrcode.getCameras()</code>. This method returns a <code>Promise</code> with a list of devices supported in format <code>{ id: &quot;id&quot;, label: &quot;label&quot; }</code>. </p>
+<pre><code class="language-js"><span class="hl-6">// This method will trigger user permissions</span><br/><span class="hl-8">Html5Qrcode</span><span class="hl-0">.</span><span class="hl-11">getCameras</span><span class="hl-0">().</span><span class="hl-11">then</span><span class="hl-0">(</span><span class="hl-8">devices</span><span class="hl-0"> </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * devices would be an array of objects of type:</span><br/><span class="hl-6">   * { id: &quot;id&quot;, label: &quot;label&quot; }</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-7">if</span><span class="hl-0"> (</span><span class="hl-8">devices</span><span class="hl-0"> &amp;&amp; </span><span class="hl-8">devices</span><span class="hl-0">.</span><span class="hl-8">length</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-10">var</span><span class="hl-0"> </span><span class="hl-8">cameraId</span><span class="hl-0"> = </span><span class="hl-8">devices</span><span class="hl-0">[</span><span class="hl-12">0</span><span class="hl-0">].</span><span class="hl-8">id</span><span class="hl-0">;</span><br/><span class="hl-0">    </span><span class="hl-6">// .. use this to start scanning.</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}).</span><span class="hl-11">catch</span><span class="hl-0">(</span><span class="hl-8">err</span><span class="hl-0"> </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">// handle err</span><br/><span class="hl-0">});</span>
+</code></pre>
+<p><strong>Important</strong>: Note that this method will trigger user permission if the user has not granted it already. </p>
+<blockquote>
+<p>Warning: Direct access to the camera is a powerful feature. It requires consent from the user, and your site MUST be on a secure origin (HTTPS).</p>
+<p>Warning: Asking for access to the camera on page load will result in most of your users rejecting access to it. <a href="https://developers.google.com/web/fundamentals/media/capturing-images">More info</a></p>
+</blockquote>
+<p>Once you have the camera ID from <code>device.id</code>, start camera using <code>Html5Qrcode#start(..)</code>. This method returns a <code>Promise</code> with Qr code scanning initiation.</p>
+<pre><code class="language-js"><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrCode</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5Qrcode</span><span class="hl-0">(</span><span class="hl-6">/* element id */</span><span class="hl-0"> </span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">);</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">(</span><br/><span class="hl-0">  </span><span class="hl-8">cameraId</span><span class="hl-0">, </span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-8">fps:</span><span class="hl-0"> </span><span class="hl-12">10</span><span class="hl-0">,    </span><span class="hl-6">// Optional, frame per seconds for qr code scanning</span><br/><span class="hl-0">    </span><span class="hl-8">qrbox:</span><span class="hl-0"> { </span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0"> }  </span><span class="hl-6">// Optional, if you want bounded box UI</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">  (</span><span class="hl-8">decodedText</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">// do something when code is read</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">  (</span><span class="hl-8">errorMessage</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">// parse error, ignore it.</span><br/><span class="hl-0">  })</span><br/><span class="hl-0">.</span><span class="hl-11">catch</span><span class="hl-0">((</span><span class="hl-8">err</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">// Start failed, handle it.</span><br/><span class="hl-0">});</span>
+</code></pre>
+<blockquote>
+<p>You can optionally set another argument in constructor called <code>verbose</code> to print all logs to console</p>
+</blockquote>
+<pre><code class="language-js"><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrCode</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5Qrcode</span><span class="hl-0">(</span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">, </span><span class="hl-6">/* verbose= */</span><span class="hl-0"> </span><span class="hl-10">true</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#scanning-without-cameraid" id="scanning-without-cameraid" style="color: inherit; text-decoration: none;">
+  <h5>Scanning without cameraId</h5>
+</a>
+<p>In mobile devices you may want users to directly scan the QR code using the back camera or the front camera for some use cases. For such cases you can avoid using the exact camera device ID that you get from <code>Html5Qrcode.getCameras()</code>. The <code>start()</code> method allows passing constraints in place of camera device ID similar to <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax">html5 web API syntax</a>. You can start scanning like mentioned in these examples:</p>
+<pre><code class="language-js"><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrCode</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5Qrcode</span><span class="hl-0">(</span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">);</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-11">qrCodeSuccessCallback</span><span class="hl-0"> = (</span><span class="hl-8">decodedText</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">/* handle success */</span><br/><span class="hl-0">};</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">config</span><span class="hl-0"> = { </span><span class="hl-8">fps:</span><span class="hl-0"> </span><span class="hl-12">10</span><span class="hl-0">, </span><span class="hl-8">qrbox:</span><span class="hl-0"> { </span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0"> } };</span><br/><br/><span class="hl-6">// If you want to prefer front camera</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">facingMode:</span><span class="hl-0"> </span><span class="hl-9">&quot;user&quot;</span><span class="hl-0"> }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span><br/><br/><span class="hl-6">// If you want to prefer back camera</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">facingMode:</span><span class="hl-0"> </span><span class="hl-9">&quot;environment&quot;</span><span class="hl-0"> }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span><br/><br/><span class="hl-6">// Select front camera or fail with `OverconstrainedError`.</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">facingMode:</span><span class="hl-0"> { </span><span class="hl-8">exact:</span><span class="hl-0"> </span><span class="hl-9">&quot;user&quot;</span><span class="hl-0">} }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span><br/><br/><span class="hl-6">// Select back camera or fail with `OverconstrainedError`.</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">facingMode:</span><span class="hl-0"> { </span><span class="hl-8">exact:</span><span class="hl-0"> </span><span class="hl-9">&quot;environment&quot;</span><span class="hl-0">} }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span>
+</code></pre>
+<p>Passing the <code>cameraId</code> (recommended approach) is similar to</p>
+<pre><code class="language-js"><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">deviceId:</span><span class="hl-0"> { </span><span class="hl-8">exact:</span><span class="hl-0"> </span><span class="hl-8">cameraId</span><span class="hl-0">} }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#stop-scanning" id="stop-scanning" style="color: inherit; text-decoration: none;">
+  <h5>Stop Scanning</h5>
+</a>
+<p>To stop using camera and thus stop scanning, call <code>Html5Qrcode#stop()</code> which returns a <code>Promise</code> for stopping the video feed and scanning.</p>
+<pre><code class="language-js"><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">stop</span><span class="hl-0">().</span><span class="hl-11">then</span><span class="hl-0">((</span><span class="hl-8">ignore</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">// QR Code scanning is stopped.</span><br/><span class="hl-0">}).</span><span class="hl-11">catch</span><span class="hl-0">((</span><span class="hl-8">err</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">// Stop failed, handle it.</span><br/><span class="hl-0">});</span>
+</code></pre>
+<blockquote>
+<p>Note that the class is stateful and <code>stop()</code> should be called to properly tear down the video and camera objects safely after calling <code>start()</code> when the scan is over or the user intend to move on. <code>stop()</code> will stop the video feed on the viewfinder.</p>
+</blockquote>
+
+<a href="#for-qr-code-scanning-using-local-files-or-inbuilt-camera-on-smartphones" id="for-qr-code-scanning-using-local-files-or-inbuilt-camera-on-smartphones" style="color: inherit; text-decoration: none;">
+  <h4>For QR Code scanning using local files or inbuilt camera on Smartphones</h4>
+</a>
+<table>
+<thead>
+<tr>
+<th>Selector in Android</th>
+<th>Selector in IOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Taken on Pixel 3, Google Chrome<br><img src="./assets/selector_android.png" width="300px"></td>
+<td>Taken on iPhone 7, Google Chrome<br><img src="./assets/selector_iphone.jpg" width="300px"></td>
+</tr>
+</tbody></table>
+<p>You can alternatively leverage QR Code scanning for local files on the device or default camera on the device. It works similar to inline QR Code scanning.</p>
+<p>Define the HTML container and import the JavaScript library as mentioned above</p>
+<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">div</span><span class="hl-0"> </span><span class="hl-3">id</span><span class="hl-0">=</span><span class="hl-4">&quot;reader&quot;</span><span class="hl-0"> </span><span class="hl-3">width</span><span class="hl-0">=</span><span class="hl-4">&quot;600px&quot;</span><span class="hl-0"> </span><span class="hl-3">height</span><span class="hl-0">=</span><span class="hl-4">&quot;600px&quot;</span><span class="hl-1">&gt;&lt;/</span><span class="hl-2">div</span><span class="hl-1">&gt;</span><br/><span class="hl-1">&lt;</span><span class="hl-2">script</span><span class="hl-5"> </span><span class="hl-3">src</span><span class="hl-5">=</span><span class="hl-4">&quot;./dist/html5-qrcode.js&quot;</span><span class="hl-1">&gt;&lt;/</span><span class="hl-2">script</span><span class="hl-1">&gt;</span>
+</code></pre>
+<blockquote>
+<p>It&#39;s not mandatory to set the height and width of the HTML element. If provided, the library would try to honor it. If it&#39;s not set, the library would set a default width and derive the height based on the input image&#39;s aspect ratio.</p>
+</blockquote>
+<p>Add an <code>Input</code> element for supporting file selection like this:</p>
+<pre><code class="language-html"><span class="hl-1">&lt;</span><span class="hl-2">input</span><span class="hl-0"> </span><span class="hl-3">type</span><span class="hl-0">=</span><span class="hl-4">&quot;file&quot;</span><span class="hl-0"> </span><span class="hl-3">id</span><span class="hl-0">=</span><span class="hl-4">&quot;qr-input-file&quot;</span><span class="hl-0"> </span><span class="hl-3">accept</span><span class="hl-0">=</span><span class="hl-4">&quot;image/*&quot;</span><span class="hl-1">&gt;</span><br/><span class="hl-6">&lt;!-- </span><br/><span class="hl-6">  Or add captured if you only want to enable smartphone camera, PC browsers will ignore it.</span><br/><span class="hl-6">--&gt;</span><br/><br/><span class="hl-1">&lt;</span><span class="hl-2">input</span><span class="hl-0"> </span><span class="hl-3">type</span><span class="hl-0">=</span><span class="hl-4">&quot;file&quot;</span><span class="hl-0"> </span><span class="hl-3">id</span><span class="hl-0">=</span><span class="hl-4">&quot;qr-input-file&quot;</span><span class="hl-0"> </span><span class="hl-3">accept</span><span class="hl-0">=</span><span class="hl-4">&quot;image/*&quot;</span><span class="hl-0"> </span><span class="hl-3">capture</span><span class="hl-1">&gt;</span>
+</code></pre>
+<p>Find more information about this at <a href="https://developers.google.com/web/fundamentals/media/capturing-images">developers.google.com</a>.</p>
+<p>And in JavaScript code initialize the object and attach listener like this:</p>
+<pre><code class="language-js"><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrCode</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5Qrcode</span><span class="hl-0">(</span><span class="hl-6">/* element id */</span><span class="hl-0"> </span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">);</span><br/><span class="hl-6">// File based scanning</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">fileinput</span><span class="hl-0"> = </span><span class="hl-8">document</span><span class="hl-0">.</span><span class="hl-11">getElementById</span><span class="hl-0">(</span><span class="hl-9">&#39;qr-input-file&#39;</span><span class="hl-0">);</span><br/><span class="hl-8">fileinput</span><span class="hl-0">.</span><span class="hl-11">addEventListener</span><span class="hl-0">(</span><span class="hl-9">&#39;change&#39;</span><span class="hl-0">, </span><span class="hl-8">e</span><span class="hl-0"> </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-7">if</span><span class="hl-0"> (</span><span class="hl-8">e</span><span class="hl-0">.</span><span class="hl-8">target</span><span class="hl-0">.</span><span class="hl-8">files</span><span class="hl-0">.</span><span class="hl-8">length</span><span class="hl-0"> == </span><span class="hl-12">0</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-6">// No file selected, ignore </span><br/><span class="hl-0">    </span><span class="hl-7">return</span><span class="hl-0">;</span><br/><span class="hl-0">  }</span><br/><br/><span class="hl-0">  </span><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">imageFile</span><span class="hl-0"> = </span><span class="hl-8">e</span><span class="hl-0">.</span><span class="hl-8">target</span><span class="hl-0">.</span><span class="hl-8">files</span><span class="hl-0">[</span><span class="hl-12">0</span><span class="hl-0">];</span><br/><span class="hl-0">  </span><span class="hl-6">// Scan QR Code</span><br/><span class="hl-0">  </span><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">scanFile</span><span class="hl-0">(</span><span class="hl-8">imageFile</span><span class="hl-0">, </span><span class="hl-10">true</span><span class="hl-0">)</span><br/><span class="hl-0">  .</span><span class="hl-11">then</span><span class="hl-0">(</span><span class="hl-8">decodedText</span><span class="hl-0"> </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">// success, use decodedText</span><br/><span class="hl-0">    </span><span class="hl-8">console</span><span class="hl-0">.</span><span class="hl-11">log</span><span class="hl-0">(</span><span class="hl-8">decodedText</span><span class="hl-0">);</span><br/><span class="hl-0">  })</span><br/><span class="hl-0">  .</span><span class="hl-11">catch</span><span class="hl-0">(</span><span class="hl-8">err</span><span class="hl-0"> </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">// failure, handle it.</span><br/><span class="hl-0">    </span><span class="hl-8">console</span><span class="hl-0">.</span><span class="hl-11">log</span><span class="hl-0">(</span><span class="hl-9">`Error scanning file. Reason: </span><span class="hl-10">${</span><span class="hl-8">err</span><span class="hl-10">}</span><span class="hl-9">`</span><span class="hl-0">)</span><br/><span class="hl-0">  });</span><br/><span class="hl-0">});</span><br/><br/><span class="hl-6">// Note: Current public API `scanFile` only returns the decoded text. There is</span><br/><span class="hl-6">// another work in progress API (in beta) which returns a full decoded result of</span><br/><span class="hl-6">// type `QrcodeResult` (check interface in src/core.ts) which contains the</span><br/><span class="hl-6">// decoded text, code format, code bounds, etc.</span><br/><span class="hl-6">// Eventually, this beta API will be migrated to the public API.</span>
+</code></pre>
+<blockquote>
+<p>Note that inline scanning and file-based scanning are mutually exclusive at the moment. This means you can only use one of them at a time. I&#39;ll soon be adding support for the option to have both if the requirement comes in. If you want to use both, use <code>html5QrCode#clear()</code> method to clear the canvas.</p>
+</blockquote>
+
+<a href="#demo" id="demo" style="color: inherit; text-decoration: none;">
+  <h2>Demo</h2>
+</a>
+<p><img src="./assets/qr-code.png" width="200px"><br>
+<em>Scan this image or visit <a href="https://blog.minhazav.dev/research/html5-qrcode.html">blog.minhazav.dev/research/html5-qrcode.html</a></em></p>
+
+<a href="#for-more-information" id="for-more-information" style="color: inherit; text-decoration: none;">
+  <h3>For more information</h3>
+</a>
+<p>Check these articles on how to use this library:</p>
+<!-- TODO(mebjas) Mirgate this link to blog.minhazav.dev -->
+<ul>
+<li><a href="https://minhazav.medium.com/qr-and-barcode-scanner-using-html-and-javascript-2cdc937f793d">QR and barcode scanner using HTML and JavaScript</a></li>
+<li><a href="https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/">HTML5 QR Code scanning — launched v1.0.1 without jQuery dependency and refactored Promise based APIs</a>.</li>
+<li><a href="https://blog.minhazav.dev/HTML5-QR-Code-scanning-support-for-local-file-and-default-camera/">HTML5 QR Code scanning with JavaScript — Support for scanning the local file and using default camera added (v1.0.5)</a></li>
+</ul>
+
+<a href="#screenshots" id="screenshots" style="color: inherit; text-decoration: none;">
+  <h2>Screenshots</h2>
+</a>
+<p><img src="assets/screen.gif" alt="screenshot"><br>
+<em>Figure: Screenshot from Google Chrome running on MacBook Pro</em></p>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<p>Following methods are available in this library (typescript definition)</p>
+<pre><code class="language-ts"><span class="hl-6">/** Camera Device interface. */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">CameraDevice</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-8">id</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-8">label</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Different states of scanner */</span><br/><span class="hl-10">enum</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeScannerState</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">// Indicates the sanning is not running or user is using file based</span><br/><span class="hl-0">  </span><span class="hl-6">// scanning.</span><br/><span class="hl-0">  </span><span class="hl-13">NOT_STARTED</span><span class="hl-0"> = </span><span class="hl-12">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-6">// Camera scan is running.</span><br/><span class="hl-0">  </span><span class="hl-13">SCANNING</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-6">// Camera scan is paused but camera is running.</span><br/><span class="hl-0">  </span><span class="hl-13">PAUSED</span><span class="hl-0">,</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/**</span><br/><span class="hl-6"> * Code formats supported by this library.</span><br/><span class="hl-6"> */</span><br/><span class="hl-10">enum</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeSupportedFormats</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-13">QR_CODE</span><span class="hl-0"> = </span><span class="hl-12">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">AZTEC</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODABAR</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_39</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_93</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_128</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">DATA_MATRIX</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">MAXICODE</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">ITF</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">EAN_13</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">EAN_8</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">PDF_417</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">RSS_14</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">RSS_EXPANDED</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_A</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_E</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_EAN_EXTENSION</span><span class="hl-0">,</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Defines dimension for QR Code Scanner. */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">QrDimensions</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-8">width</span><span class="hl-0">: </span><span class="hl-14">number</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-8">height</span><span class="hl-0">: </span><span class="hl-14">number</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Format of detected code. */</span><br/><span class="hl-10">class</span><span class="hl-0"> </span><span class="hl-14">QrcodeResultFormat</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-10">public</span><span class="hl-0"> </span><span class="hl-10">readonly</span><span class="hl-0"> </span><span class="hl-8">format</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeSupportedFormats</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-10">public</span><span class="hl-0"> </span><span class="hl-10">readonly</span><span class="hl-0"> </span><span class="hl-8">formatName</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Detailed scan result. */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">QrcodeResult</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/** Decoded text. */</span><br/><span class="hl-0">  </span><span class="hl-8">text</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/** Format that was successfully scanned. */</span><br/><span class="hl-0">  </span><span class="hl-8">format</span><span class="hl-0">?: </span><span class="hl-14">QrcodeResultFormat</span><span class="hl-0">,</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** QrCode result object. */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeResult</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-8">decodedText</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-8">result</span><span class="hl-0">: </span><span class="hl-14">QrcodeResult</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Type for a callback for a successful code scan. */</span><br/><span class="hl-10">type</span><span class="hl-0"> </span><span class="hl-14">QrcodeSuccessCallback</span><br/><span class="hl-0">  = (</span><span class="hl-8">decodedText</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">, </span><span class="hl-8">result</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeResult</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> </span><span class="hl-14">void</span><span class="hl-0">;</span><br/><br/><span class="hl-6">/** Type for a callback for failure during code scan. */</span><br/><span class="hl-10">type</span><span class="hl-0"> </span><span class="hl-14">QrcodeErrorCallback</span><br/><span class="hl-0">  = (</span><span class="hl-8">errorMessage</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">, </span><span class="hl-8">error</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeError</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> </span><span class="hl-14">void</span><span class="hl-0">;</span><br/><br/><span class="hl-6">/**</span><br/><span class="hl-6"> * Interface for configuring {</span><span class="hl-10">@class</span><span class="hl-6"> Html5Qrcode} class instance.</span><br/><span class="hl-6"> */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeConfigs</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Array of formats to support of type {</span><span class="hl-10">@type</span><span class="hl-6"> Html5QrcodeSupportedFormats}.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">formatsToSupport</span><span class="hl-0">: </span><span class="hl-14">Array</span><span class="hl-0">&lt;</span><span class="hl-14">Html5QrcodeSupportedFormats</span><span class="hl-0">&gt; | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/** Configuration for creating {</span><span class="hl-10">@class</span><span class="hl-6"> Html5Qrcode}. */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeFullConfig</span><span class="hl-0"> </span><span class="hl-10">extends</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeConfigs</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * If true, all logs would be printed to console. False by default.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">verbose</span><span class="hl-0">: </span><span class="hl-14">boolean</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeCameraScanConfig</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Optional, Expected framerate of QR code scanning. example { fps: 2 } means the</span><br/><span class="hl-6">   * scanning would be done every 500 ms.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">fps</span><span class="hl-0">: </span><span class="hl-14">number</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Optional, edge size or dimension of QR scanning box, this should be </span><br/><span class="hl-6">   * smaller than the width and height of the full region.</span><br/><span class="hl-6">   * This would make the scanner look like this:</span><br/><span class="hl-6">   *          ----------------------</span><br/><span class="hl-6">   *          |********************|</span><br/><span class="hl-6">   *          |******,,,,,,,,,*****|      &lt;--- shaded region</span><br/><span class="hl-6">   *          |******|       |*****|      &lt;--- non shaded region would be</span><br/><span class="hl-6">   *          |******|       |*****|          used for QR code scanning.</span><br/><span class="hl-6">   *          |******|_______|*****|</span><br/><span class="hl-6">   *          |********************|</span><br/><span class="hl-6">   *          |********************|</span><br/><span class="hl-6">   *          ----------------------</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * Instance of {</span><span class="hl-10">@interface</span><span class="hl-6"> </span><span class="hl-14">QrDimensions</span><span class="hl-6">} can be passed to construct a non</span><br/><span class="hl-6">   * square rendering of scanner box.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * If this value is not set, no shaded QR box will be rendered and the scanner</span><br/><span class="hl-6">   * will scan the entire area of video stream.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">qrbox</span><span class="hl-0">?: </span><span class="hl-14">number</span><span class="hl-0"> | </span><span class="hl-14">QrDimensions</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Optional, Desired aspect ratio for the video feed. Ideal aspect ratios</span><br/><span class="hl-6">   * are 4:3 or 16:9. Passing very wrong aspect ratio could lead to video feed</span><br/><span class="hl-6">   * not showing up.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">aspectRatio</span><span class="hl-0">?: </span><span class="hl-14">number</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Optional, if {</span><span class="hl-10">@code</span><span class="hl-6"> true} flipped QR Code won&#39;t be scanned. Only use this</span><br/><span class="hl-6">   * if you are sure the camera cannot give mirrored feed if you are facing</span><br/><span class="hl-6">   * performance constraints.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">disableFlip</span><span class="hl-0">?: </span><span class="hl-14">boolean</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/*</span><br/><span class="hl-6">   * Optional, @beta(this config is not well supported yet).</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * Important: When passed this will override other parameters like</span><br/><span class="hl-6">   * &#39;cameraIdOrConfig&#39; or configurations like &#39;aspectRatio&#39;.</span><br/><span class="hl-6">   * &#39;videoConstraints&#39; should be of type {@code MediaTrackConstraints} as</span><br/><span class="hl-6">   * defined in</span><br/><span class="hl-6">   * https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints</span><br/><span class="hl-6">   * and is used to specify a variety of video or camera controls like:</span><br/><span class="hl-6">   * aspectRatio, facingMode, frameRate, etc.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">videoConstraints</span><span class="hl-0">?: </span><span class="hl-14">MediaTrackConstraints</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">/**</span><br/><span class="hl-6"> * Interface for controlling different aspects of {</span><span class="hl-10">@class</span><span class="hl-6"> Html5QrcodeScanner}.</span><br/><span class="hl-6"> */</span><br/><span class="hl-10">interface</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeScannerConfig</span><br/><span class="hl-0">  </span><span class="hl-10">extends</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeCameraScanConfig</span><span class="hl-0">, </span><span class="hl-14">Html5QrcodeConfigs</span><span class="hl-0"> {</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * If {</span><span class="hl-10">@code</span><span class="hl-6"> true} the library will remember if the camera permissions</span><br/><span class="hl-6">   * were previously granted and what camera was last used. If the permissions</span><br/><span class="hl-6">   * is already granted for &quot;camera&quot;, QR code scanning will automatically</span><br/><span class="hl-6">   * start for previously used camera.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-8">rememberLastUsedCamera</span><span class="hl-0">?: </span><span class="hl-14">boolean</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">;</span><br/><span class="hl-0">};</span><br/><br/><span class="hl-10">class</span><span class="hl-0"> </span><span class="hl-14">Html5Qrcode</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Returns a Promise with a list of all cameras supported by the device.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-10">static</span><span class="hl-0"> </span><span class="hl-11">getCameras</span><span class="hl-0">(): </span><span class="hl-14">Array</span><span class="hl-0">&lt;</span><span class="hl-14">CameraDevice</span><span class="hl-0">&gt; </span><span class="hl-6">// Returns a Promise</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Initialize QR Code scanner.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">elementId</span><span class="hl-6"> - Id of the HTML element.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">verbose</span><span class="hl-6"> - optional configuration object</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-10">constructor</span><span class="hl-0">(</span><span class="hl-8">elementId</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">, </span><span class="hl-8">config</span><span class="hl-0">:  </span><span class="hl-14">Html5QrcodeFullConfig</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">) {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Start scanning QR codes or barcodes for a given camera.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">cameraIdOrConfig</span><span class="hl-6"> Identifier of the camera, it can either be the</span><br/><span class="hl-6">   *  camera id retrieved from {</span><span class="hl-10">@code</span><span class="hl-6"> Html5Qrcode#getCameras()} method or</span><br/><span class="hl-6">   *  object with facing mode constraint.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">configuration</span><span class="hl-6"> Extra configurations to tune the code scanner.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-6"> Callback called when an instance of a QR</span><br/><span class="hl-6">   * code or any other supported bar code is found.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">qrCodeErrorCallback</span><span class="hl-6"> Callback called in cases where no instance of</span><br/><span class="hl-6">   * QR code or any other supported bar code is found.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">start</span><span class="hl-0">(</span><br/><span class="hl-0">    </span><span class="hl-8">cameraIdOrConfig</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeIdentifier</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">configuration</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeCameraScanConfig</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">: </span><span class="hl-14">QrcodeSuccessCallback</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">qrCodeErrorCallback</span><span class="hl-0">: </span><span class="hl-14">QrcodeErrorCallback</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">,</span><br/><span class="hl-0">  ): </span><span class="hl-14">Promise</span><span class="hl-0">&lt;</span><span class="hl-14">null</span><span class="hl-0">&gt; {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Pauses the ongoing scan.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">shouldPauseVideo</span><span class="hl-6"> (Optional, default = false) If {</span><span class="hl-10">@code</span><span class="hl-6"> true} the</span><br/><span class="hl-6">   * video will be paused.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@throws</span><span class="hl-6"> error if method is called when scanner is not in scanning state.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">pause</span><span class="hl-0">(</span><span class="hl-8">shouldPauseVideo</span><span class="hl-0">?: </span><span class="hl-14">boolean</span><span class="hl-0">);</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Resumes the paused scan.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * If the video was previously paused by setting {</span><span class="hl-10">@code</span><span class="hl-6"> shouldPauseVideo}</span><br/><span class="hl-6">   * to {</span><span class="hl-10">@code</span><span class="hl-6"> true} in </span><span class="hl-14">{</span><span class="hl-10">@link</span><span class="hl-14"> </span><span class="hl-8">Html5Qrcode#pause(shouldPauseVideo)</span><span class="hl-14">}</span><span class="hl-6">, calling</span><br/><span class="hl-6">   * this method will resume the video.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * Note: with this caller will start getting results in success and error</span><br/><span class="hl-6">   * callbacks.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@throws</span><span class="hl-6"> error if method is called when scanner is not in paused state.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">resume</span><span class="hl-0">();</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Stops streaming QR Code video and scanning. </span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">stop</span><span class="hl-0">(): </span><span class="hl-14">Promise</span><span class="hl-0">&lt;</span><span class="hl-14">void</span><span class="hl-0">&gt; {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Gets state of the camera scan.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@returns</span><span class="hl-6"> state of type {</span><span class="hl-10">@enum</span><span class="hl-6"> ScannerState}.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">getState</span><span class="hl-0">(): </span><span class="hl-14">Html5QrcodeScannerState</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Scans an Image File for QR Code.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * This feature is mutually exclusive to camera-based scanning, you should</span><br/><span class="hl-6">   * call stop() if the camera-based scanning was ongoing.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">imageFile</span><span class="hl-6"> a local file with Image content.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">showImage</span><span class="hl-6"> if true, the Image will be rendered on given element.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@returns</span><span class="hl-6"> Promise with decoded QR code string on success.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">scanFile</span><span class="hl-0">(</span><br/><span class="hl-0">    </span><span class="hl-8">imageFile</span><span class="hl-0">: </span><span class="hl-14">File</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-6">/* default=true */</span><span class="hl-0"> </span><span class="hl-8">showImage</span><span class="hl-0">: </span><span class="hl-14">boolean</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">): </span><span class="hl-14">Promise</span><span class="hl-0">&lt;</span><span class="hl-14">string</span><span class="hl-0">&gt; {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Clears the existing canvas.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * Note: in case of ongoing web-cam based scan, it needs to be explicitly</span><br/><span class="hl-6">   * closed before calling this method, else it will throw an exception.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">clear</span><span class="hl-0">(): </span><span class="hl-14">void</span><span class="hl-0"> {}  </span><span class="hl-6">// Returns void</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">class</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeScanner</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Creates an instance of this class.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">elementId</span><span class="hl-6"> Id of the HTML element.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">config</span><span class="hl-6"> Extra configurations to tune the code scanner.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">verbose</span><span class="hl-6"> - If true, all logs would be printed to console. </span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-10">constructor</span><span class="hl-0">(</span><br/><span class="hl-0">    </span><span class="hl-8">elementId</span><span class="hl-0">: </span><span class="hl-14">string</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">config</span><span class="hl-0">: </span><span class="hl-14">Html5QrcodeScannerConfig</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">verbose</span><span class="hl-0">: </span><span class="hl-14">boolean</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">) {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Renders the User Interface.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-6"> Callback called when an instance of a QR</span><br/><span class="hl-6">   * code or any other supported bar code is found.</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">qrCodeErrorCallback</span><span class="hl-6"> optional callback called in cases where no</span><br/><span class="hl-6">   * instance of QR code or any other supported bar code is found.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">render</span><span class="hl-0">(</span><br/><span class="hl-0">    </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">: </span><span class="hl-14">QrcodeSuccessCallback</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">qrCodeErrorCallback</span><span class="hl-0">: </span><span class="hl-14">QrcodeErrorCallback</span><span class="hl-0"> | </span><span class="hl-14">undefined</span><span class="hl-0">) {}</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Pauses the ongoing scan.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * Notes:</span><br/><span class="hl-6">   * -   Should only be called if camera scan is ongoing.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@param</span><span class="hl-6"> </span><span class="hl-8">shouldPauseVideo</span><span class="hl-6"> (Optional, default = false) If {</span><span class="hl-10">@code</span><span class="hl-6"> true}</span><br/><span class="hl-6">   * the video will be paused.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@throws</span><span class="hl-6"> error if method is called when scanner is not in scanning state.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">pause</span><span class="hl-0">(</span><span class="hl-8">shouldPauseVideo</span><span class="hl-0">?: </span><span class="hl-14">boolean</span><span class="hl-0">);</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Resumes the paused scan.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * If the video was previously paused by setting {</span><span class="hl-10">@code</span><span class="hl-6"> shouldPauseVideo}</span><br/><span class="hl-6">   * to {</span><span class="hl-10">@code</span><span class="hl-6"> true} in </span><span class="hl-14">{</span><span class="hl-10">@link</span><span class="hl-14"> </span><span class="hl-8">Html5QrcodeScanner#pause(shouldPauseVideo)</span><span class="hl-14">}</span><span class="hl-6">,</span><br/><span class="hl-6">   * calling this method will resume the video.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * Notes:</span><br/><span class="hl-6">   * -   Should only be called if camera scan is ongoing.</span><br/><span class="hl-6">   * -   With this caller will start getting results in success and error</span><br/><span class="hl-6">   * callbacks.</span><br/><span class="hl-6">   * </span><br/><span class="hl-6">   * </span><span class="hl-10">@throws</span><span class="hl-6"> error if method is called when scanner is not in paused state.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">resume</span><span class="hl-0">();</span><br/><span class="hl-0">    </span><br/><span class="hl-0">  </span><span class="hl-6">/**</span><br/><span class="hl-6">   * Gets state of the camera scan.</span><br/><span class="hl-6">   *</span><br/><span class="hl-6">   * </span><span class="hl-10">@returns</span><span class="hl-6"> state of type {</span><span class="hl-10">@enum</span><span class="hl-6"> Html5QrcodeScannerState}.</span><br/><span class="hl-6">   */</span><br/><span class="hl-0">  </span><span class="hl-11">getState</span><span class="hl-0">(): </span><span class="hl-14">Html5QrcodeScannerState</span><span class="hl-0">;</span><br/><br/><span class="hl-0">  </span><span class="hl-6">/** Removes the QR Code scanner UI. */</span><br/><span class="hl-0">  </span><span class="hl-11">clear</span><span class="hl-0">(): </span><span class="hl-14">Promise</span><span class="hl-0">&lt;</span><span class="hl-14">void</span><span class="hl-0">&gt;  {}</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<a href="#extra-optional-configuration-in-start-method" id="extra-optional-configuration-in-start-method" style="color: inherit; text-decoration: none;">
+  <h3>Extra optional <code>configuration</code> in <code>start()</code> method</h3>
+</a>
+<p>Configuration object that can be used to configure both the scanning behavior and the user interface (UI). Most of the fields have default properties that will be used unless a different value is provided. If you do not want to override anything, you can just pass in an empty object <code>{}</code>.</p>
+
+<a href="#fps--integer-example--10" id="fps--integer-example--10" style="color: inherit; text-decoration: none;">
+  <h4><code>fps</code> — Integer, Example = 10</h4>
+</a>
+<p>A.K.A frame per second, the default value for this is 2, but it can be increased to get faster scanning. Increasing too high value could affect performance. Value <code>&gt;1000</code> will simply fail.</p>
+
+<a href="#qrbox--qrdimensions-optional-example---width-250-height-250-" id="qrbox--qrdimensions-optional-example---width-250-height-250-" style="color: inherit; text-decoration: none;">
+  <h4><code>qrbox</code> — <code>QrDimensions</code> (Optional), Example = <code>{ width: 250, height: 250 }</code></h4>
+</a>
+<p>Use this property to limit the region of the viewfinder you want to use for scanning. The rest of the viewfinder would be shaded. For example, by passing config <code>{ qrbox : { width: 250, height: 250 } }</code>, the screen will look like:</p>
+<img src="./assets/screen.gif">
+
+<p>This can be used to set a rectangular scanning area with config like:</p>
+<pre><code class="language-js"><span class="hl-10">let</span><span class="hl-0"> </span><span class="hl-8">config</span><span class="hl-0"> = { </span><span class="hl-8">qrbox :</span><span class="hl-0"> { </span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">400</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">150</span><span class="hl-0"> } }</span>
+</code></pre>
+<blockquote>
+<p>This might be desirable for bar code scanning.</p>
+</blockquote>
+<p>If this value is not set, no shaded QR box will be rendered and the scanner will scan the entire area of video stream.</p>
+
+<a href="#aspectratio--float-example-1777778-for-169-aspect-ratio" id="aspectratio--float-example-1777778-for-169-aspect-ratio" style="color: inherit; text-decoration: none;">
+  <h4><code>aspectRatio</code> — Float, Example 1.777778 for 16:9 aspect ratio</h4>
+</a>
+<p>Use this property to render the video feed in a certain aspect ratio. Passing a nonstandard aspect ratio like <code>100000:1</code> could lead to the video feed not even showing up. Ideal values can be:
+| Value | Aspect Ratio | Use Case |
+| ----- | ------------ | -------- |
+|1.333334 | 4:3 | Standard camera aspect ratio |
+|1.777778 | 16:9 | Full screen, cinematic |
+|1.0 | 1:1 | Square view |</p>
+<p>If you do not pass any value, the whole viewfinder would be used for scanning. 
+<strong>Note</strong>: this value has to be smaller than the width and height of the <code>QR code HTML element</code>.</p>
+
+<a href="#disableflip--boolean-optional-default--false" id="disableflip--boolean-optional-default--false" style="color: inherit; text-decoration: none;">
+  <h4><code>disableFlip</code> — Boolean (Optional), default = false</h4>
+</a>
+<p>By default, the scanner can scan for horizontally flipped QR Codes. This also enables scanning QR code using the front camera on mobile devices which are sometimes mirrored. This is <code>false</code> by default and I recommend changing this only if:</p>
+<ul>
+<li>You are sure that the camera feed cannot be mirrored (Horizontally flipped)</li>
+<li>You are facing performance issues with this enabled.</li>
+</ul>
+<p>Here&#39;s an example of a normal and mirrored QR Code
+| Normal QR Code | Mirrored QR Code |
+| ----- | ---- |
+| <img src="./assets/qr-code.png" width="200px"> | <img src="./assets/qr-code-flipped.png" width="200px"><br> |</p>
+
+<a href="#rememberlastusedcamera--boolean-optional-default--true" id="rememberlastusedcamera--boolean-optional-default--true" style="color: inherit; text-decoration: none;">
+  <h4><code>rememberLastUsedCamera</code> — Boolean (Optional), default = true</h4>
+</a>
+<p>If <code>true</code> the last camera used by the user and weather or not permission was granted would be remembered in the local storage. If the user has previously granted permissions — the request permission option in the UI will be skipped and the last selected camera would be launched automatically for scanning.</p>
+<p>If <code>true</code> the library shall remember if the camera permissions were previously
+granted and what camera was last used. If the permissions is already granted for
+&quot;camera&quot;, QR code scanning will automatically * start for previously used camera.</p>
+
+<a href="#scanning-only-specific-formats" id="scanning-only-specific-formats" style="color: inherit; text-decoration: none;">
+  <h3>Scanning only specific formats</h3>
+</a>
+<p>By default, both camera stream and image files are scanned against all the
+supported code formats.  Both <code>Html5QrcodeScanner</code> and <code>Html5Qrcode</code> classes can
+ be configured to only support a subset of supported formats. Supported formats
+are defined in
+<a href="https://github.com/mebjas/html5-qrcode/blob/master/src/core.ts#L14">enum Html5QrcodeSupportedFormats</a>.</p>
+<pre><code class="language-ts"><span class="hl-10">enum</span><span class="hl-0"> </span><span class="hl-14">Html5QrcodeSupportedFormats</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-13">QR_CODE</span><span class="hl-0"> = </span><span class="hl-12">0</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">AZTEC</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODABAR</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_39</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_93</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">CODE_128</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">DATA_MATRIX</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">MAXICODE</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">ITF</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">EAN_13</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">EAN_8</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">PDF_417</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">RSS_14</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">RSS_EXPANDED</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_A</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_E</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-13">UPC_EAN_EXTENSION</span><span class="hl-0">,</span><br/><span class="hl-0">}</span>
+</code></pre>
+<p>I recommend using this only if you need to explicitly omit support for certain
+formats or want to reduce the number of scans done per second for performance
+reasons.</p>
+
+<a href="#scanning-only-qr-code-with-html5qrcode" id="scanning-only-qr-code-with-html5qrcode" style="color: inherit; text-decoration: none;">
+  <h4>Scanning only QR code with <code>Html5Qrcode</code></h4>
+</a>
+<pre><code class="language-js"><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrCode</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5Qrcode</span><span class="hl-0">(</span><br/><span class="hl-0">  </span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">, { </span><span class="hl-8">formatsToSupport:</span><span class="hl-0"> [ </span><span class="hl-8">Html5QrcodeSupportedFormats</span><span class="hl-0">.</span><span class="hl-13">QR_CODE</span><span class="hl-0"> ] });</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-11">qrCodeSuccessCallback</span><span class="hl-0"> = (</span><span class="hl-8">decodedText</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-6">/* handle success */</span><br/><span class="hl-0">};</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">config</span><span class="hl-0"> = { </span><span class="hl-8">fps:</span><span class="hl-0"> </span><span class="hl-12">10</span><span class="hl-0">, </span><span class="hl-8">qrbox:</span><span class="hl-0"> { </span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0"> } };</span><br/><br/><span class="hl-6">// If you want to prefer front camera</span><br/><span class="hl-8">html5QrCode</span><span class="hl-0">.</span><span class="hl-11">start</span><span class="hl-0">({ </span><span class="hl-8">facingMode:</span><span class="hl-0"> </span><span class="hl-9">&quot;user&quot;</span><span class="hl-0"> }, </span><span class="hl-8">config</span><span class="hl-0">, </span><span class="hl-8">qrCodeSuccessCallback</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#scanning-only-qr-code-and-upc-codes-with-html5qrcodescanner" id="scanning-only-qr-code-and-upc-codes-with-html5qrcodescanner" style="color: inherit; text-decoration: none;">
+  <h4>Scanning only QR code and UPC codes with <code>Html5QrcodeScanner</code></h4>
+</a>
+<pre><code class="language-js"><span class="hl-10">function</span><span class="hl-0"> </span><span class="hl-11">onScanSuccess</span><span class="hl-0">(</span><span class="hl-8">decodedText</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-6">// Handle the scanned code as you like, for example:</span><br/><span class="hl-0">  </span><span class="hl-8">console</span><span class="hl-0">.</span><span class="hl-11">log</span><span class="hl-0">(</span><span class="hl-9">`Code matched = </span><span class="hl-10">${</span><span class="hl-8">decodedText</span><span class="hl-10">}</span><span class="hl-9">`</span><span class="hl-0">, </span><span class="hl-8">decodedResult</span><span class="hl-0">);</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">formatsToSupport</span><span class="hl-0"> = [</span><br/><span class="hl-0">  </span><span class="hl-8">Html5QrcodeSupportedFormats</span><span class="hl-0">.</span><span class="hl-13">QR_CODE</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-8">Html5QrcodeSupportedFormats</span><span class="hl-0">.</span><span class="hl-13">UPC_A</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-8">Html5QrcodeSupportedFormats</span><span class="hl-0">.</span><span class="hl-13">UPC_E</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-8">Html5QrcodeSupportedFormats</span><span class="hl-0">.</span><span class="hl-13">UPC_EAN_EXTENSION</span><span class="hl-0">,</span><br/><span class="hl-0">];</span><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">html5QrcodeScanner</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">Html5QrcodeScanner</span><span class="hl-0">(</span><br/><span class="hl-0">  </span><span class="hl-9">&quot;reader&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-8">fps:</span><span class="hl-0"> </span><span class="hl-12">10</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-8">qrbox:</span><span class="hl-0"> { </span><span class="hl-8">width:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0">, </span><span class="hl-8">height:</span><span class="hl-0"> </span><span class="hl-12">250</span><span class="hl-0"> },</span><br/><span class="hl-0">    </span><span class="hl-8">formatsToSupport:</span><span class="hl-0"> </span><span class="hl-8">formatsToSupport</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">  </span><span class="hl-6">/* verbose= */</span><span class="hl-0"> </span><span class="hl-10">false</span><span class="hl-0">);</span><br/><span class="hl-8">html5QrcodeScanner</span><span class="hl-0">.</span><span class="hl-11">render</span><span class="hl-0">(</span><span class="hl-8">onScanSuccess</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#experimental-features" id="experimental-features" style="color: inherit; text-decoration: none;">
+  <h2>Experimental features</h2>
+</a>
+<p>The library now supports some experimental features which are supported in the
+library but not recommended for production usage either due to limited testing
+done or limited compatibility for underlying APIs used. Read more about it <a href="/experimental.md">here</a>.
+Some experimental features include:</p>
+<ul>
+<li><a href="/experimental.md">Support for BarcodeDetector JavaScript API</a></li>
+</ul>
+
+<a href="#how-to-modify-and-build" id="how-to-modify-and-build" style="color: inherit; text-decoration: none;">
+  <h2>How to modify and build</h2>
+</a>
+<ol>
+<li><p>Code changes should only be made to <a href="./src">/src</a> only.</p>
+</li>
+<li><p>Run <code>npm install</code> to install all dependencies.</p>
+</li>
+<li><p>Run <code>npm run-script build</code> to build JavaScript output. The output JavaScript distribution is built to <a href="./dist/html5-qrcode.min.js">/dist/html5-qrcode.min.js</a>. If you are developing on Windows OS, run <code>npm run-script build-windows</code>.</p>
+</li>
+<li><p>Testing</p>
+<ul>
+<li>Run <code>npm test</code></li>
+<li>Run the tests before sending a pull request, all tests should run.</li>
+<li>Please add tests for new behaviors sent in PR.</li>
+</ul>
+</li>
+<li><p>Send a pull request</p>
+<ul>
+<li>Include code changes only to <code>./src</code>. <strong>Do not change <code>./dist</code> manually.</strong></li>
+<li>In the pull request add a comment like<pre><code class="language-text">@all-contributors please add @mebjas for this new feature or tests
+</code></pre>
+</li>
+<li>For calling out your contributions, the bot will update the contributions file.</li>
+<li>Code will be built &amp; published by the author in batches.</li>
+</ul>
+</li>
+</ol>
+
+<a href="#how-to-contribute" id="how-to-contribute" style="color: inherit; text-decoration: none;">
+  <h2>How to contribute</h2>
+</a>
+<p>You can contribute to the project in several ways:</p>
+<ul>
+<li>File issue ticket for any observed bug or compatibility issue with the project.</li>
+<li>File feature request for missing features.</li>
+<li>Take open bugs or feature request and work on it and send a Pull Request.</li>
+<li>Write unit tests for existing codebase (which is not covered by tests today). <strong>Help wanted on this</strong> - <a href="./tests">read more</a>.</li>
+</ul>
+
+<a href="#support-💖" id="support-💖" style="color: inherit; text-decoration: none;">
+  <h2>Support 💖</h2>
+</a>
+<p>This project would not be possible without all of our fantastic contributors and <a href="https://github.com/sponsors/mebjas">sponsors</a>. If you&#39;d like to support the maintenance and upkeep of this project you can <a href="https://github.com/sponsors/mebjas">donate via GitHub Sponsors</a>.</p>
+<!-- sponsors -->
+<p><a href="https://github.com/ben-gy"><img src="https://github.com/ben-gy.png" width="40px" alt="" /></a></p>
+<!-- sponsors -->
+
+<p>And huge thanks to following organizations for non monitery sponsorships</p>
+<!-- sponsors -->
+<p><a href="https://www.browserstack.com"><img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" height="100px" alt="" /></a></p>
+<!-- sponsors -->
+
+
+<a href="#credits" id="credits" style="color: inherit; text-decoration: none;">
+  <h2>Credits</h2>
+</a>
+<p>The decoder used for the QR code reading is from <code>Zxing-js</code> <a href="https://github.com/zxing-js/library">https://github.com/zxing-js/library</a><br></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-enum"><a href="enums/Html5QrcodeScannerState.html" class="tsd-kind-icon">Html5<wbr/>Qrcode<wbr/>Scanner<wbr/>State</a></li><li class="tsd-kind-enum"><a href="enums/Html5QrcodeSupportedFormats.html" class="tsd-kind-icon">Html5<wbr/>Qrcode<wbr/>Supported<wbr/>Formats</a></li><li class="tsd-kind-class"><a href="classes/Html5Qrcode.html" class="tsd-kind-icon">Html5<wbr/>Qrcode</a></li><li class="tsd-kind-class"><a href="classes/Html5QrcodeScanner.html" class="tsd-kind-icon">Html5<wbr/>Qrcode<wbr/>Scanner</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li><li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
