@@ -10,6 +10,7 @@ webpack
 cat scripts/webpack_append_data.js >> dist/html5-qrcode.min.js
 
 cp dist/html5-qrcode.min.js minified/html5-qrcode.min.js
+cp dist/html5-qrcode.min.js javascript/html5-qrcode.js
 echo 'Copied the webpack script to minified/..'
 
 echo 'Webpack building done.'
